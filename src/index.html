@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="uk">
-   @@include('template-parts/head.html', { 'title': 'Головна' })
-   <body>
-      <div class="wrapper">
-         @@include('template-parts/header.html', { })
-         <main>
-            <section class="hero">
-               <div class="hero__container">
-               </div>
-            </section>
-         </main>
-        @@include('template-parts/footer.html', { }) @@include('template-parts/modal.html', { }) 
-      </div>
-      <script type="module" crossorigin src="./js/app.min.js"></script>
-   </body>
+  @@include('template-parts/head.html', { 'title': 'Головна' })
+  <body>
+    @@include('template-parts/header.html', { })
+    <div class="wrapper">
+      <main>
+        <section class="hero">
+          <img src="./img/hero-img.webp" alt="Home Care in Montgomery County, PA" class="hero__image" />
+          <div class="hero__container">
+            <div class="hero__content">
+              <h1 class="hero__title">Home Care in Montgomery County, PA</h1>
+              <p class="hero__text">
+                SarahCare believes that your loved ones deserve the highest quality of care, all within their home's familiar and reassuring surroundings. That's why we provide
+                exceptional home care Montgomery County, PA, that prioritizes not only physical well-being but also emotional support and companionship.
+                <br />
+                <br />
+                Our dedicated caregivers are committed to enhancing the lives of those we serve by offering personalized assistance with daily activities, promoting independence,
+                and fostering a warm and nurturing environment. Everyone deserves the opportunity to age gracefully, and our comprehensive home care services are designed to do
+                exactly that.
+              </p>
+              <div class="hero__links">
+                <a href="#" title="Adult Day Care" class="hero__link btn btn_accent">
+                  <span>Adult Day Care</span>
+                  <img src="./img/red-heart.svg" alt="Adult Day Care" />
+                </a>
+                <a href="#" title="Home Care" class="hero__link btn btn_white">
+                  <span>Home Care</span>
+                  <img src="./img/white-heart.svg" alt="Home Care" />
+                </a>
+              </div>
+              <div class="bottom-line">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    @@include('template-parts/footer.html', { }) @@include('template-parts/modal.html', { })
+    <script type="module" crossorigin src="./js/app.min.js"></script>
+  </body>
 </html>
