@@ -622,3 +622,112 @@ body {
     }
   }
 }
+
+.sarahcare {
+  @include av("padding-top", 70, 39);
+  &__container {
+  }
+  &__title {
+    color: $text-color;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 23px;
+    @media (max-width: ($sm)) {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+    span {
+      color: $accent-color;
+      font-size: 50px;
+      @media (max-width: ($sm)) {
+        font-size: 35px;
+      }
+    }
+  }
+  &__body {
+    display: flex;
+    @include av("column-gap", 105, 0);
+    @media (max-width: ($lg)) {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+    @media (max-width: ($sm)) {
+      row-gap: 30px;
+    }
+  }
+  &__list {
+    flex: 1 0 56.5%;
+    padding-left: 12px;
+    @media (max-width: ($lg)) {
+      padding-left: 0;
+      flex: 1 1 100%;
+    }
+  }
+  &__image {
+    object-fit: contain;
+    &_top {
+      transform: translateY(-30px);
+      @media (max-width: ($lg)) {
+        transform: translateY(0) translateX(70px);
+        width: 50%;
+      }
+      @media (max-width: ($sm)) {
+        width: 50%;
+        transform: translateX(20px);
+      }
+    }
+    &_bottom {
+      transform: translateY(-200px) translateX(75px);
+      @media (max-width: ($lg)) {
+        transform: translateY(35px) translateX(-70px);
+        width: 55%;
+      }
+      @media (max-width: ($sm)) {
+        width: 55%;
+        transform: translateY(15px) translateX(-20px);
+      }
+    }
+    @media (max-width: ($lg)) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.item-sarahcare {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &__title {
+    color: $text-color;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: $text-color;
+      border-radius: 50%;
+      top: 10px;
+      left: 5px;
+    }
+    @media (max-width: ($sm)) {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+  &__text {
+    color: $text-color;
+    font-size: 20px;
+    line-height: 1.4;
+    padding-left: 20px;
+    @media (max-width: ($sm)) {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+}
