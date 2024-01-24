@@ -565,3 +565,60 @@ body {
     }
   }
 }
+
+.services {
+  @include av("padding-top", 70, 45);
+  &__container {
+  }
+  &__title {
+    color: $text-color;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 22px;
+    span {
+      color: $accent-color;
+    }
+    @media (max-width: ($sm)) {
+      font-size: 25px;
+    }
+  }
+  &__content {
+    position: relative;
+    background: #fff;
+    box-shadow: 3px 3px 30px 0px rgba(0, 0, 0, 0.08);
+    padding: 60px 67.6px 103px 75px;
+    .bottom-line {
+      height: 7.3px;
+    }
+    @media (max-width: ($md)) {
+      padding: 29px 23.5px 70px 23.5px;
+    }
+  }
+  &__list {
+  }
+}
+.item-services {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &__title {
+    color: $accent-color;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    @media (max-width: ($sm)) {
+      font-size: 16px;
+    }
+  }
+  &__text {
+    color: $text-color;
+    font-size: 20px;
+    line-height: 1.4;
+    padding-left: 18px;
+    @media (max-width: ($sm)) {
+      font-size: 16px;
+      padding-left: 16px;
+    }
+  }
+}
